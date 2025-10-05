@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@AllArgsConstructor
+
 @RestController
 @RequiredArgsConstructor
 public class AuthController {
 
-    private JwtService jwtService;
-    private RefreshTokenService refreshTokenService;
-    private UserDetailsServiceImpl userDetailsService;
+    private final JwtService jwtService;
+    private final RefreshTokenService refreshTokenService;
+    private final UserDetailsServiceImpl userDetailsService;
 
     @PostMapping("auth/v1/signup")
     public ResponseEntity SignUp(@RequestBody UserInfoDto userInfoDto){

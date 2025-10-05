@@ -1,14 +1,19 @@
 package com.Security.JwtAccessRefresh.model;
 
-import com.Security.JwtAccessRefresh.entity.UserInfo;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import lombok.Data;
 
-@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class UserInfoDto extends UserInfo {
+@Data
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+public class UserInfoDto {
 
-    private String userName;
-    private String lastName;
+    private String username;
+    private String lastname;
     private Long phoneNumber;
     private String email;
+    private String password;
+
+
 }
